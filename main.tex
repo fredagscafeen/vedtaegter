@@ -38,6 +38,10 @@
 \setlength\aftersecskip{0pt}
 \setlength\beforesecskip{\baselineskip}
 
+\makeatletter
+\renewcommand{\p@section}{\thechapter~\expandafter\MakeLowercase}
+\makeatother
+
 \begin{document}
 
 \maketitle
@@ -69,11 +73,11 @@ enten som studerende eller ansat. Medlemmet har ingen retslige forpligtigelser o
 
 \section{} Bestyrelsen beslutter ud fra ansøgningerne, hvem der optages som medlem.
 
-\section{} Foreningens medlemmer forventes at overholde reglerne i \S 4.
+\section{} Foreningens medlemmer forventes at overholde reglerne i \ref{p:rules}.
 
-\chapter{Regler for medlemmer}
+\chapter{Regler for medlemmer}\label{p:rules}
 
-\section{} Medlemmer deltager aktivt i afholdelse af foreningens arrangementer.
+\section{}\label{s:active} Medlemmer deltager aktivt i afholdelse af foreningens arrangementer.
 
 \section{} Hverken foreningens bestyrelse eller øvrige medlemmer kan få udbetalt løn eller subsidier af
 foreningen.
@@ -81,9 +85,9 @@ foreningen.
 
 \chapter{Udmeldelse}
 
-\section{} Medlemmer der ikke opfylder \S 4 stk. 1 kan af bestyrelsen ekskluderes.
+\section{} Medlemmer der ikke opfylder \ref{s:active} kan af bestyrelsen ekskluderes.
 
-\section{} Et medlem kan ekskluderes hvis dette besluttes på en generalforsamling i foreningen.
+\section{}\label{s:gfexclusion} Et medlem kan ekskluderes hvis dette besluttes på en generalforsamling i foreningen.
 
 \section{} Ethvert medlem kan med minimum én måneds varsel, til den siddende bestyrelse, udtræde af foreningen.
 
@@ -99,7 +103,7 @@ foreningen.
 \item 1--2 bestyrelsessuppleanter
 \end{itemize}
 
-\section{} Bestyrelsen vælges på en generalforsamling. Først vælges formanden, dernæst kassereren, så de menige
+\section{}\label{s:howvote} Bestyrelsen vælges på en generalforsamling. Først vælges formanden, dernæst kassereren, så de menige
 bestyrelsesmedlemmer og til sidst bestyrelsessuppleanter. Formanden og kasseren skal enten godkendes af et flertal
 af den siddende bestyrelse eller have været medlemmer af foreningen i mindst 1 år.
 
@@ -141,7 +145,7 @@ besluttes med almindeligt flertal og stemmeret har medlemmer af foreningen.
 \item Beretning om foreningens regnskab af foreningens kasserer.
 \item Behandling af indkomne forslag.
 \item Evaluering af foreningens arbejde.
-\item Valg af bestyrelse ud fra \S 6 stk 2.
+\item Valg af bestyrelse ud fra \ref{s:howvote}.
 \item Eventuelt.
 \end{enumerate}
 
@@ -170,7 +174,7 @@ sine eventuelle aktiver, hæfter.
 \section{} Ændringer af vedtægter skal behandles på en generalforsamling, hvor beslutninger tages af et
 almindeligt flertal blandt alle foreningens medlemmer.
 
-\section{} Vedtægterne \S 5 stk. 2, §11 stk. 2 samt \S 12 stk. 2 kan kun ændres af et kvalificeret flertal på 2/3 af
+\section{} Vedtægterne \ref{s:gfexclusion}, \ref{s:disbandmentmoney} samt \ref{s:dateonbylaws} kan kun ændres af et kvalificeret flertal på 2/3 af
 foreningens medlemmer.
 
 
@@ -179,13 +183,13 @@ foreningens medlemmer.
 \section{} Foreningen kan opløses på en generalforsamling, hvor 80\% af foreningens medlemmer stemmer
 for dette forslag.
 
-\section{} Ved opløsning af foreningen overføres alle foreningens midler til en studenterstøttende fond.
+\section{}\label{s:disbandmentmoney} Ved opløsning af foreningen overføres alle foreningens midler til en studenterstøttende fond.
 
 \chapter{Vedtagelse og ikrafttræden}
 
 \section{} Disse vedtægter træder i kraft dagen efter vedtagelse.
 
-\section{} Datoen for vedtagelse skal påføres vedtægterne
+\section{}\label{s:dateonbylaws} Datoen for vedtagelse skal påføres vedtægterne
 
 \section{} Disse vedtægter erstatter alle tidligere vedtægter
 
