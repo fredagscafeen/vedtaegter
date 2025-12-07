@@ -1,9 +1,43 @@
-#!/bin/bash
-set -euo pipefail
+#!/usr/bin/env python3
+import shutil
+from pathlib import Path
+from subprocess import check_output, run
 
-cd "$(dirname ${BASH_SOURCE[0]})"
+base_dir = Path(__file__).absolute().parent
+excluded_dirs = []
 
-latexmk -halt-on-error -pdf main.tex
+out_dir = base_dir / "out"
+out_dir.mkdir(exist_ok=True)
 
-mkdir -p out
-cp main.pdf out/vedtaegter.pdf
+tex_files = []
+for d in base_dir.iterdir():
+    if not d.is_dir():
+        continue
+
+    if d.name in excluded_dirs:
+        continue
+
+    tex_file = d / "main.tex"
+    if not tex_file.exists():
+        continue
+
+    tex_files.append((tex_file, d.with_suffix(".pdf").name))
+
+
+for tex_file, out_name in tex_files:
+    print(f"Compiling {tex_file}")
+
+    contents = tex_file.read_text()
+
+    try:
+        tex_file.write_text(contents)
+
+        run(
+            ["latexmk", "-halt-on-error", "-pdf", tex_file.name],
+            cwd=tex_file.parent,
+            check=True,
+        )
+        pdf = tex_file.with_suffix(".pdf")
+        shutil.copy(pdf, out_dir / out_name)
+    finally:
+        tex_file.write_text(contents)

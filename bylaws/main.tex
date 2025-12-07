@@ -1,0 +1,192 @@
+\documentclass[english,a4paper,twocolumn,oneside,article]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{xspace}
+\usepackage{microtype}
+\usepackage[osf]{mathpazo}
+\linespread{1.05}
+
+\title{Bylaws for Fredagscaféen}
+\author{}
+\date{}
+
+% Typografi: Marginer, spalter og lister
+\setlrmarginsandblock{1.5cm}{*}{1}
+\setulmarginsandblock{2.5cm}{*}{1.2}
+\setlength\columnsep{3em}
+\checkandfixthelayout[nearest]
+\firmlists
+
+% Typografi: \chapter er paragraf, \section er stykke. Typegrafien
+% skal være særlig for at skabe overskuelighed og skabe plads.
+\makechapterstyle{bylaws}{
+  \def\chapterheadstart{\pagebreak[1]\vspace{\beforechapskip}}
+  \def\printchaptername{}
+  \def\printchaptertitle##1{\centering\chaptitlefont##1}
+  \def\chapternamenum{}
+  \def\printchapternum{\centerline{\chapnumfont\thechapter}}
+}\chapterstyle{bylaws}
+\setlength\beforechapskip{2\baselineskip plus 3pt minus 3pt}
+\setlength\midchapskip{4pt plus 1pt minus 2pt}
+\setlength\afterchapskip{1\baselineskip plus 1pt minus 2pt}
+\renewcommand\chapnumfont{\huge\bfseries}
+\renewcommand\chaptitlefont{\Large\bfseries}
+\renewcommand{\thechapter}{\S\arabic{chapter}}
+\renewcommand{\thesection}{Sec.~\arabic{section}}
+\setsecheadstyle{\normalsize\bfseries}
+\setlength\aftersecskip{0pt}
+\setlength\beforesecskip{\baselineskip}
+
+\makeatletter
+\renewcommand{\p@section}{\thechapter~\expandafter\MakeLowercase}
+\makeatother
+
+\begin{document}
+
+\maketitle
+\newpage
+
+Passed at the association's ordinary general assembly on Friday, February 28, 2025.
+
+\chapter{Name and affiliation}
+
+\section{} The name of the association is Fredagscaféen.
+
+\section{} The association's home is at the Department of Computer Science at Aarhus University, Åbogade 34 8200 Aarhus N.
+
+\chapter{Purpose}
+
+\section{} Holding a Friday café for students and employees affiliated with the Department of Computer Science at 
+Aarhus University.
+
+\section{} Create a social forum where students and employees can meet in a cozy and informal setting.
+
+\section{} Organizing social events for students and employees affiliated with the Department of Computer Science at 
+Aarhus University.
+
+
+\chapter{Members}
+
+\section{} To be accepted as a member, one must be affiliated with IT City Katrinebjerg, either as a student or employee. 
+The member has no legal obligations towards the association.
+
+\section{} The board decides who will be admitted as a member based on the applications.
+
+\section{} Members of the association are expected to comply with the rules of \ref{p:rules}.
+
+\chapter{Rules for members}\label{p:rules}
+
+\section{}\label{s:active} Members actively participate in conducting the association's events.
+
+\section{} Neither the association's board nor other members may receive salaries or subsidies from the 
+association.
+
+
+\chapter{Resignation}
+
+\section{} A qualified majority of 2/3 of the board may exclude a member of the association if
+they do not comply with the rules specified in \ref{p:rules}, or if the majority of the board deems 
+it necessary.
+
+\section{} Any member may resign from the association with at least one month's notice to the current board.
+
+
+\chapter{Board}
+
+\section{} The association's board consists of:
+
+\begin{itemize}
+\item Chairman
+\item Treasurer
+\item 2--8 common board members
+\item 1--2 board substitutes
+\end{itemize}
+
+\section{}\label{s:howvote} The board is elected at a general assembly. 
+First the chairman is elected, then the treasurer, then the ordinary board members and finally the board substitutes. 
+The chairman and treasurer must either be approved by a majority of the sitting board or have been members of the 
+association for at least 1 year.
+
+\section{} The board is responsible for the operation and administration of the association.
+
+\section{} The chairman is responsible for the association's daily operations and for convening meetings 
+with the board or all members of the association. The chairman is also responsible for convening the 
+general assembly of the association.
+
+\section{} The treasurer is responsible for preparing an annual accounts and presenting it at the ordinary general assembly.
+
+\section{} The association is signed by the chairman and the treasurer.
+
+\section{} Board substitutes are allowed to observe and assist with the operation of the board, but without voting rights.
+If one or more board members, for a longer period of their board term, are prevented from performing their board duties,
+then one or more board substitutes will be able to act as substitutes for the current board member(s) with full voting rights.
+
+\chapter{General assembly}
+
+\section{} The ordinary general assembly is held in the spring semester each year.
+
+\section{} Notice of the general assembly must be sent to the association's members at least 2 weeks before the event. 
+The agenda must be sent at least 1 week before the event.
+
+\section{} Proposals submitted to the general assembly must reach the board no later than 1 week before 
+the general assembly.
+
+\section{} The general assembly has a quorum when 20\% of the association's members are present. 
+Decisions are made by simple majority and members of the association have voting rights.
+
+\section{} At ordinary general assemblies the following items must be addressed:
+
+\begin{enumerate}
+\item Formalities; election of conductor and rapporteur.
+\item Report from the outgoing board.
+\item Report on the association's accounts by the association's treasurer.
+\item Processing of received proposals.
+\item Evaluation of the association's work.
+\item Election of the board based on \ref{s:howvote}.
+\item Election of auditor.
+\item AOB; Any other business.
+\end{enumerate}
+
+\section{} If at least one member present so wishes, the given vote shall be held in writing.
+
+\section{} The board or a majority of the association's members may call an extraordinary general assembly. 
+This must be done with at least 1 month's notice.
+
+
+\chapter{Accounts}
+
+\section{} The association's fiscal year runs from January 1 to December 31.
+
+\section{} The auditor elected by the general assembly carries out a thorough critical audit and checks the accounting.
+
+
+\chapter{Responsibility}
+
+\section{} In the event of any deficit or similar in the association's activities, only the association, 
+with its possible assets, is liable.
+
+
+\chapter{Amendments}
+
+\section{} Amendments to the bylaws must be considered at a general meeting, where decisions are made 
+by a qualified majority of 2/3 of the members present.
+
+
+\chapter{Dissolution of the association}
+
+\section{} The association may be dissolved at a general meeting where 80\% of the association's members vote 
+in favor of this proposal.
+
+\section{}\label{s:disbandmentmoney} Upon dissolution of the association, all of the association's funds will 
+be transferred to a student support fund.
+
+\chapter{Passing and commencement}
+
+\section{} These bylaws enter into force on the day after its passage.
+
+\section{}\label{s:dateonbylaws} The date of the bylaws must be stated in the articles of association.
+
+\section{} These bylaws replace all previous bylaws.
+
+\end{document}
